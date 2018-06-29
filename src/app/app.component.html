@@ -1,0 +1,45 @@
+<div>
+<div [routerLink] = "['/Home']"  routerLinkActive="active-link">
+
+  <h1>
+    {{title}}
+  </h1>
+
+<table *ngIf ="arrBirds">
+  <!-- Add Header -->
+  <tr>
+    <th>
+      Id
+    </th>
+    <th>
+      Name Of the Bird
+    </th>
+    <th>
+      Type of Bird
+    </th>
+  </tr>
+
+  <!-- Bind the array to the table -->
+  <tr *ngFor="let bird of arrBirds">
+    <td>
+      {{bird.ID}}
+    </td>
+    <td>
+      {{bird.Name}}    
+    </td>
+    <td>
+      {{bird.Type}}
+    </td>
+
+
+  </tr>
+
+</table>
+
+</div>
+<div [routerLink] = "['/About']" >
+ 
+</div>
+</div>
+<router-outlet>
+</router-outlet>
